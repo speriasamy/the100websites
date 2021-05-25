@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasi Prias | 100 Websites | Project 002</title>
+    <style>
+        body {
+            background-color: rgb(243, 234, 234);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .door_container {
+            text-align: center;
+        }
+        
+        .door {
+            display: inline-block;
+            margin: 0 30px;
+            border: 2px solid blue;
+        }
+        
+        #text_container {
+            text-align: center;
+            margin: 20px 0 50px 0;
+        }
+        
+        .title {
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        p {
+            font-size: 20px;
+            line-height: 1.9;
+        }
+        
+        .error {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 40px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="text_container">
+
+        <div class="title">Do you want to try your luck today?</div>
+        <p>There are three doors. Behind two doors there are BAD THINGS.
+
+            <br> Behind one door is an AWESOME THING.
+            <br> Choose a door...
+        </p>
+    </div>
+
+    <div class="door_container">
+        <div class="door" onclick="doorgreen()">
+            <a href="" id="greendoor"><img src="/images/project002-greendoor.jpg" alt="" width="100"></a>
+        </div>
+        <div class="door" onclick="doorred()">
+            <a href="" id="reddoor"><img src="/images/project002-reddoor.jpg" alt="" width="100"></a>
+        </div>
+        <div class="door" onclick="dooryellow()">
+            <a href="" id="yellowdoor"><img src="/images/project002-yellowdoor.jpg" alt="" width="100"></a>
+        </div>
+    </div>
+    <div class="error" style="" id="error">
+        <mark>Its not your lucky day today.. try again later</mark>
+    </div>
+    <script>
+        function doorgreen() {
+            document.getElementById("error").style = "display:block";
+        }
+
+        function doorred() {
+            document.getElementById("reddoor").href = "/images/project002-money.gif"
+        }
+
+        function dooryellow() {
+            document.getElementById("error").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
