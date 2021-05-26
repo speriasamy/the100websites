@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasi Prias | 100 Websites | Project 002</title>
+    <style>
+        body {
+            background-color: rgb(218, 240, 178);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .door_container {
+            text-align: center;
+        }
+        
+        .door {
+            display: inline-block;
+            margin: 0 30px;
+            /* border: 2px solid blue; */
+        }
+        
+        #text_container {
+            text-align: center;
+            margin: 20px 0 50px 0;
+        }
+        
+        .title {
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        p {
+            font-size: 20px;
+            line-height: 1.9;
+        }
+        
+        .btn {
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            margin: 50px auto;
+            /* padding: 5px; */
+            text-align: center;
+            font-size: 40px;
+            background-color: #46d11d;
+            cursor: pointer;
+        }
+        
+        .btn_text {
+            padding: 15px 5px 5px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="text_container">
+
+        <div class="title">This page allows you to roll virtual dice.</div>
+        <p id="result">Your daily dose of facts : The word ‘die’ is singular and ‘dice’ is plural.</p>
+    </div>
+
+    <div class="door_container">
+        <div class="door">
+            <img src="/images/p003-dice1.png" alt="" width="100" id="dice1">
+        </div>
+        <div class="door">
+            <img src="/images/p003-dice1.png" alt="" width="100" id="dice2">
+        </div>
+    </div>
+    <div class="btn">
+        <div class="btn_text" onclick="showresult()">Roll</div>
+    </div>
+    <div style="text-align: center;">Note: Roll until you get Snake eyes(A throw of two ones)</div>
+    <script>
+        function showresult() {
+            //This is for the first die
+            var roll1 = Math.floor(Math.random() * 6) + 1;
+            var ele = document.getElementById("dice1")
+            switch (roll1) {
+                case 1:
+                    ele.src = "/images/p003-dice1.png";
+                    break;
+                case 2:
+                    ele.src = "/images/p003-dice2.png";
+                    break;
+                case 3:
+                    ele.src = "/images/p003-dice3.png";
+                    break;
+                case 4:
+                    ele.src = "/images/p003-dice4.png";
+                    break;
+                case 5:
+                    ele.src = "/images/p003-dice5.png";
+                    break;
+                case 6:
+                    ele.src = "/images/p003-dice6.png";
+                    break;
+            }
+            //this is for the second die
+            var roll2 = Math.floor(Math.random() * 6) + 1;
+            var ele = document.getElementById("dice2")
+            switch (roll2) {
+                case 1:
+                    ele.src = "/images/p003-dice1.png";
+                    break;
+                case 2:
+                    ele.src = "/images/p003-dice2.png";
+                    break;
+                case 3:
+                    ele.src = "/images/p003-dice3.png";
+                    break;
+                case 4:
+                    ele.src = "/images/p003-dice4.png";
+                    break;
+                case 5:
+                    ele.src = "/images/p003-dice5.png";
+                    break;
+                case 6:
+                    ele.src = "/images/p003-dice6.png";
+                    break;
+            }
+            var result = roll1 + roll2;
+            if (result == 2) {
+                document.getElementById("result").innerHTML = "<mark>Result of your Roll is : Snake eyes!</mark>";
+            } else {
+
+                document.getElementById("result").innerHTML = "<mark>Result of your Roll is : " + result + "</mark>";
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
