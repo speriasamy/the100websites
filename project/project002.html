@@ -20,6 +20,7 @@
             display: inline-block;
             margin: 0 30px;
             border: 2px solid blue;
+            cursor: pointer;
         }
         
         #text_container {
@@ -42,7 +43,7 @@
             margin-top: 100px;
             text-align: center;
             font-size: 40px;
-            display: none;
+            opacity: 0;
         }
     </style>
 </head>
@@ -60,21 +61,21 @@
 
     <div class="door_container">
         <div class="door" onclick="doorgreen()">
-            <a href="" id="greendoor"><img src="/images/project002-greendoor.jpg" alt="" width="100"></a>
+            <img src="/images/project002-greendoor.jpg" alt="" width="100">
         </div>
         <div class="door" onclick="doorred()">
             <a href="" id="reddoor"><img src="/images/project002-reddoor.jpg" alt="" width="100"></a>
         </div>
         <div class="door" onclick="dooryellow()">
-            <a href="" id="yellowdoor"><img src="/images/project002-yellowdoor.jpg" alt="" width="100"></a>
+            <img src="/images/project002-yellowdoor.jpg" alt="" width="100">
         </div>
     </div>
     <div class="error" style="" id="error">
-        <mark>Its not your lucky day today.. try again later</mark>
+        <mark>Its not your lucky day today.. <a href="">try again</a> later</mark>
     </div>
     <script>
         function doorgreen() {
-            document.getElementById("error").style = "display:block";
+            document.getElementById("error").style.opacity = 1;
         }
 
         function doorred() {
@@ -82,7 +83,7 @@
         }
 
         function dooryellow() {
-            document.getElementById("error").style.display = "block";
+            document.getElementById("error").style.opacity = 1;
         }
     </script>
 </body>
